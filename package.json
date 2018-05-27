@@ -1,0 +1,23 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikats5/electron.git"
+  },
+  "author": "Saikat Saha <saikats_5@yahoo.co.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saikats5/electron/issues"
+  },
+  "homepage": "https://github.com/saikats5/electron#readme",
+  "devDependencies": {
+    "electron": "2.0.2"
+  }
+}
