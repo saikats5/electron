@@ -4,7 +4,7 @@ var electron = require("electron");
 var app = electron.app;
 var BrowserWindow = electron.BrowserWindow;
 var path = require("path");
-var path = require("url");
+var url = require("url");
 
 var win;
 function createWindow(){
@@ -14,4 +14,22 @@ function createWindow(){
         protocol: 'file',
         slashes: true
     }));
+    win.on('closed',function(){
+        win = null;
+    })
 }
+
+app.on('ready', createWindow);
+
+app.on('window-all-closed',function(){
+    if(process.platform !== 'darwin'){
+        app.quit();
+    }
+});
+
+//IOS
+app.on('activate', function(){
+    if(win === null){
+        createWindow();
+    }
+});
